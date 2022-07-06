@@ -1,0 +1,33 @@
+int solve(int arr[],int n, int m)
+{ 
+int mindiff = INT_MAX;
+    int currdiff;
+    sort(arr,arr+n);
+    cout<<"Sorted array";
+    for(int i =0  ; i < n ;i++)
+    {
+       
+        cout<<" "<<arr[i]<<" ";
+    }
+    
+    
+    cout<<"\n";
+    int j;
+    for(int i = 0 ; i<=n-7;i++)
+    {
+        
+            j=i+m-1;
+            currdiff=arr[j]-arr[i];
+           // cout<<" "<<currdiff;
+            if(currdiff<mindiff)
+            {
+                mindiff=currdiff;
+            }
+    
+    }
+
+
+	return mindiff;	
+
+	
+}
